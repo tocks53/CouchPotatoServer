@@ -268,7 +268,7 @@ class TheMovieDb(MovieProvider):
         if len(languages):
             return languages
 
-        return [ 'en' ]
+        return [ 'fr' ]
 
     def getTitles(self, movie):
         # add the title to the list
