@@ -242,7 +242,7 @@ class TheMovieDb(MovieProvider):
         params = tryUrlencode(params)
 
         try:
-            url = 'https://api.themoviedb.org/3/%s?api_key=%s&language=fr%s' % (call, self.getApiKey(), '&%s' % params if params else '')    
+            url = 'https://api.themoviedb.org/3/%s?api_key=%s%s' % (call, self.getApiKey(), '&%s' % params if params else '')    
             data = self.getJsonData(url, show_error = False)
         except:
             log.debug('Movie not found: %s, %s', (call, params))
